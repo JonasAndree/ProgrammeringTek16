@@ -1,4 +1,4 @@
-package lektion.klasser;
+package classes.lesson;
 
 public class Circle {
 	private double r = 1.0;
