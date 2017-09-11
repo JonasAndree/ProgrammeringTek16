@@ -4,7 +4,7 @@ public class TestCircle {
 
 	public static void main(String[] args) {
 		
-		Circle newCircle = new Circle();
+		Circle newCircle = new Circle("red");
 		
 		System.out.println(newCircle.getR());
 
