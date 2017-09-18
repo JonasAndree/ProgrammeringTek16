@@ -1,26 +1,25 @@
 package classes.lesson;
 
 public class Car {
+	// Bilens motor typ
 	private String motor = "";
-	private int bromsVärde = 0;
-	private int antalDäck = 4;
-	private String bilMärke = "";
-	private int maxHastighet;
-	private int hastighet = 0;
-	
-	public Car(String newMotor, String newBilMärke) {
+	private int brakingValue = 0;
+	private int numburOfWheels = 4;
+	private String brand = "";
+	private int maxSpeed;
+	private int speed = 0;
+
+	public Car(String newMotor, String newCarBrand) {
 		motor = newMotor;
-		bilMärke = newBilMärke;
+		brand = newCarBrand;
 	}
-	
-	public void setSpeed(int newHastighet) {
-		hastighet = newHastighet;
+
+	public void setSpeed(int newSpeed) {
+		speed = newSpeed;
 	}
-	
+
 	public int getSpeed() {
-		return hastighet;
+		return speed;
 	}
-	
-	
 
 }
