@@ -1,4 +1,4 @@
-package classes.ecersises7;
+package classes.exercises6;
 
 class Person {
 	private String name;
@@ -17,15 +17,5 @@ class Person {
 		// Note: no 'this' here. 'name' is
 		// not ambiguous so we don't need 'this'.
 		System.out.println("My name is " + name);
-	}
-
-	public void setName(String name) {
-		// Use 'this' again to disambiguate.
-		this.name = name;
-	}
-
-	public String getName() {
-		// No need for 'this' - not ambiguous here.
-		return name;
 	}
 }

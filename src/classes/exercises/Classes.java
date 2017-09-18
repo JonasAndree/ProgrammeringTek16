@@ -1,4 +1,4 @@
-package classes.ecersises;
+package classes.exercises;
 /**
  * 
  * @author jonas.andree

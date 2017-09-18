@@ -1,4 +1,4 @@
-package classes.ecersises4;
+package classes.exercises4;
 
 public class Person {
 	public Person() {
