@@ -53,7 +53,7 @@ package loops.lesson;
  * 		Otherwise, print bad. Use the && and || operator in your if statement.
  * 		Capsulate the program with a while loop asking the user the same questions forever.
  * 
- * Loop exercise 7
+ * Loop exercise 4
  *		Write program to allow the user to input his/her age. 
  *		Then the program will show if the person is eligible to vote (using System.out.println();) 
  *		A person who is eligible to vote must be older than or equal to 18 years old. 
@@ -70,11 +70,11 @@ package loops.lesson;
  * 		Else if the user enters above or equal to 18 replay with:
  * 			You are eligible to vote.
  * 
- * Loop exercise 8
+ * Loop exercise 5
  *  	Add a quitting question/option to the loop 1 in exercise 6.
  *			For example if the user replays with “esc” to the program the loop ends. 
  *
- * Loop exercise 9
+ * Loop exercise 6
  * 		Write a small story within a loop. 
  * 		Where you use different questions depending on what the integer variable “stage” is.
  * 		Example:
@@ -82,7 +82,7 @@ package loops.lesson;
  * 			and depending on the users answer, the variable “stage” gets a new value and a new question is asked. 
  *
  *
- * Loop exercise 10
+ * Loop exercise 7
  * 
  * 		To do 1:
  * 			Write a command line program that will print out the lyrics to 99 Bottles.
