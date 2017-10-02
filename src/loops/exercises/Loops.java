@@ -1,7 +1,7 @@
 /**
  * 
  */
-package loops.lesson;
+package loops.exercises;
 
 /**
  * Loop exercise 1

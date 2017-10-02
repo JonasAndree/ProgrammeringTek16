@@ -12,11 +12,11 @@ import java.util.Scanner;
 public class Uppgift3 {
 
 	public static void main(String[] args) {
-		
 		Scanner myScanner = new Scanner(System.in);
 		System.out.print("Whrite a number: ");
 		while(true) {
 			int usersNumber = myScanner.nextInt();
+			
 			if (usersNumber > 5) {
 				if(usersNumber > 8 && usersNumber < 10 ||  usersNumber > 33) {
 					System.out.println("Good");
