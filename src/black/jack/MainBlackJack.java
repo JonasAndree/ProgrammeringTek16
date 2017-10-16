@@ -36,23 +36,9 @@ public class MainBlackJack {
 			}
 		}
 		
-		Random randomCardGenerator = new Random();
 		
 		for (int numberOfCards = 0; numberOfCards < 10; numberOfCards++) {
-			int cardValue = randomCardGenerator.nextInt(13) + 1;
-			int cardType = randomCardGenerator.nextInt(4) + 1;
-			String cardTypeString = null;
-			if (cardType == 1) {
-				cardTypeString = "\u2661";
-			} else if (cardType == 2) {
-				cardTypeString = "\u2662";
-			} else if (cardType == 3) {
-				cardTypeString = "\u2663";
-			} else if (cardType == 4) {
-				cardTypeString = "\u2660";
-			}
 			
-			System.out.println(cardValue + cardTypeString);
 		}
 		
 		
