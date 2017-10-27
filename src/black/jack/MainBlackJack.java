@@ -14,11 +14,15 @@ public class MainBlackJack {
 	private static int players;
 	private static Scanner userInput;
 	private static int maxPlayers = 6;
+	private static Deck deck;
 	
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		deck = new Deck();
+		System.out.println("Deck created!");
+		
 		userInput = new Scanner(System.in);
 		
 		while (true) {
@@ -38,6 +42,9 @@ public class MainBlackJack {
 		
 		
 		for (int numberOfCards = 0; numberOfCards < 10; numberOfCards++) {
+			
+			System.out.println( deck.getCard().getCard() );
+			
 			
 		}
 		

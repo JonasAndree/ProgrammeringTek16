@@ -31,8 +31,8 @@ public class Card {
 		return cardType;
 	}
 	
-	public void getCard() {
-		System.out.println(cardValue + cardType);
+	public String getCard() {
+		return cardValue + cardType;
 	}
 	
 	public String toString() {
