@@ -3,6 +3,7 @@
  */
 package black.jack;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -15,6 +16,11 @@ public class MainBlackJack {
 	private static Scanner userInput;
 	private static int maxPlayers = 6;
 	private static Deck deck;
+	
+	// Our players. 
+	private static ArrayList<Player> playerList = new ArrayList<>();
+	
+	
 	
 	/**
 	 * @param args
@@ -40,13 +46,32 @@ public class MainBlackJack {
 			}
 		}
 		
+		for (int i = 0; i < players; i++) {
+			System.out.print("Player " + (i + 1) + " select a name: ");
+			playerList.add( new Player()   );
+		}
+		int playersTurn = 0;
+		while (true) {
+			Player player = playerList.get(playersTurn);
+			System.out.println(player.getName() + " turn.");
+			
+			player.bet();
+			
+			if (playersTurn < players - 1) {
+				playersTurn++;
+			} else {
+				playersTurn = 0;
+			}
+		}
 		
+		
+		/*
 		for (int numberOfCards = 0; numberOfCards < 10; numberOfCards++) {
 			
 			System.out.println( deck.getCard().getCard() );
 			
 			
-		}
+		}*/
 		
 		
 		

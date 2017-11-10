@@ -14,6 +14,7 @@ public class Player {
 	public Player() {
 		name = playerScanner.nextLine();
 	}
+	
 	public String getName() {
 		return name;
 	}
@@ -41,15 +42,15 @@ public class Player {
 		
 		while (true) {
 			String answer = playerScanner.nextLine();
-			if (answer.equals("Yes")) {
+			if (answer.equalsIgnoreCase("yes")) {
 				break;
-			} else if (answer.equals("No")) {
+			} else if (answer.equalsIgnoreCase("no")) {
 				return false;
 			} else {
 				System.out.println("Incorrect input, answer Yes or No");
 			}	
 		}
-		
+		System.out.println("How much do you want to bet? ");
 		while (true) {
 			try {
 				int bet = Integer.parseInt( playerScanner.nextLine() );
