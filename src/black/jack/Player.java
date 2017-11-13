@@ -93,7 +93,10 @@ public class Player {
 	
 	public void set(boolean won) {
 		if (won == true) {
+			System.out.println("Congratulation you won! You doubled your bet!");
 			dollar += 2 * currentBet;
+		} else {
+			System.out.println("Congratulation you lost! You lost your bet!");
 		}
 		
 		currentBet = 0;

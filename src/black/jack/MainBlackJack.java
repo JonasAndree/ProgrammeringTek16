@@ -19,6 +19,7 @@ public class MainBlackJack {
 	
 	// Our players. 
 	private static ArrayList<Player> playerList = new ArrayList<>();
+	private static Player dealer = new Player();
 	
 	
 	
@@ -52,11 +53,24 @@ public class MainBlackJack {
 		}
 		int playersTurn = 0;
 		int stage = 0;
-		
+		boolean dealerStage1 = false; 
+		boolean dealerStage3 = false; 
 		
 		while (true) {
 			Player player = playerList.get(playersTurn);
 			System.out.println(player.getName() + " turn.");
+			
+			if (stage == 1 && dealerStage1 == false) {
+				dealer.addCard( deck.getCard() );
+				System.out.println("The dealer card:");
+				dealer.printCards();
+				dealerStage1 = true;
+			} else if (stage == 3 && dealerStage3 == false) {
+				dealer.addCard( deck.getCard() );
+				System.out.println("The dealer cards:");
+				dealer.printCards();
+				dealerStage3 = true;
+			}
 			
 			
 			if (stage == 0) {
@@ -68,6 +82,10 @@ public class MainBlackJack {
 			} else if (stage == 2) {
 				player.printCards();
 				while (true) {
+					if (player.getCardsValue() == 21) {
+						player.set(true);
+						break;
+					}
 					System.out.println("Would you like one more card?");
 					if (player.getOneMoreCard() == true) {
 						player.addCard( deck.getCard() );
@@ -83,18 +101,42 @@ public class MainBlackJack {
 					}
 				}
 			} else if(stage == 3) {
-				for (int i = 0; i < players; i++) {
-					if (player.getCurrentBet() > 0) {
-						
+				if (player.getCurrentBet() > 0) {
+					if (dealer.getCardsValue() == 21) {
+						player.set(false);
+					} else if ( dealer.getCardsValue() > 21 ) {
+						player.set(true);
+					} else {
+						if (dealer.getCardsValue() > player.getCardsValue()) {
+							player.set(false);
+						}
 					}
 				}
 			}
+			
 			
 			if (playersTurn < players - 1) {
 				playersTurn++;
 			} else {
 				playersTurn = 0;
-				stage++;
+				boolean newRoundNeeded = false;
+				
+				if (stage == 3) {
+					for(int i = 0; i < players; i++) {
+						if (playerList.get(i).getCurrentBet() > 0) {
+							newRoundNeeded = true;
+							break;
+						}
+					}
+					if(newRoundNeeded == true) {
+						dealer.addCard(deck.getCard());
+					} else {
+						stage = 0;
+					}
+					
+				} else {
+					stage++;
+				}
 			}
 		}
 	}
