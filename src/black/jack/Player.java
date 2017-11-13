@@ -22,6 +22,20 @@ public class Player {
 	public void addCard(Card newCard) {
 		playersCards.add(newCard);
 	}
+	
+	public boolean getOneMoreCard() {
+		while (true) {
+			String answer = playerScanner.nextLine();
+			if (answer.equalsIgnoreCase("yes")) {
+				return true;
+			} else if (answer.equalsIgnoreCase("no")) {
+				return false;
+			} else {
+				System.out.println("Incorrect input, answer Yes or No");
+			}	
+		}
+	}
+	
 	public int getCardsValue() {
 		int value = 0;
 		if (playersCards.size() == 0)
@@ -32,6 +46,11 @@ public class Player {
 		return value;
 	}
 	
+	public void printCards() {
+		for (int i = 0; i < playersCards.size(); i++) {
+			System.out.println(playersCards.get(i).getCard());
+		}
+	}
 	
 	//ofiow
 	
@@ -68,6 +87,10 @@ public class Player {
 			}
 		}
 	}
+	public int getCurrentBet() {
+		return currentBet;
+	}
+	
 	public void set(boolean won) {
 		if (won == true) {
 			dollar += 2 * currentBet;

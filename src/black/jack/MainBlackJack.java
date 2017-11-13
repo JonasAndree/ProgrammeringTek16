@@ -51,31 +51,51 @@ public class MainBlackJack {
 			playerList.add( new Player()   );
 		}
 		int playersTurn = 0;
+		int stage = 0;
+		
+		
 		while (true) {
 			Player player = playerList.get(playersTurn);
 			System.out.println(player.getName() + " turn.");
 			
-			player.bet();
+			
+			if (stage == 0) {
+				player.bet();
+			} else if (stage == 1) {
+				player.addCard( deck.getCard() );
+				player.addCard( deck.getCard() );
+				player.printCards();
+			} else if (stage == 2) {
+				player.printCards();
+				while (true) {
+					System.out.println("Would you like one more card?");
+					if (player.getOneMoreCard() == true) {
+						player.addCard( deck.getCard() );
+						player.printCards();
+						if (player.getCardsValue() > 21) {
+							player.set(false);
+						} else if (player.getCardsValue() == 21) {
+							player.set(true);
+							break;
+						}
+					} else {
+						break;
+					}
+				}
+			} else if(stage == 3) {
+				for (int i = 0; i < players; i++) {
+					if (player.getCurrentBet() > 0) {
+						
+					}
+				}
+			}
 			
 			if (playersTurn < players - 1) {
 				playersTurn++;
 			} else {
 				playersTurn = 0;
+				stage++;
 			}
 		}
-		
-		
-		/*
-		for (int numberOfCards = 0; numberOfCards < 10; numberOfCards++) {
-			
-			System.out.println( deck.getCard().getCard() );
-			
-			
-		}*/
-		
-		
-		
-		
-		
 	}
 }
