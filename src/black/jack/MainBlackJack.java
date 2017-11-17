@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
+import jdk.nashorn.internal.scripts.JO;
+
 /**
  * @author jonas.andree
  *
@@ -19,7 +23,7 @@ public class MainBlackJack {
 	
 	// Our players. 
 	private static ArrayList<Player> playerList = new ArrayList<>();
-	private static Player dealer = new Player();
+	private static Player dealer = new Player(false);
 	
 	
 	
@@ -34,13 +38,16 @@ public class MainBlackJack {
 		
 		while (true) {
 			System.out.print("How many players(1-6 players)?");
-			String userStringInput = userInput.nextLine();
+			String userStringInput = JOptionPane.showInputDialog("How many players(1-6 players)?");
+			//String userStringInput = userInput.nextLine();
 			players = Integer.parseInt(userStringInput);
 			
 			if (players > maxPlayers) {
 				System.out.println("You selected too many players.");
+				JOptionPane.showMessageDialog(null, "You selected too many players.");
 			} else if (players < 1) {
 				System.out.println("You selected too few players.");
+				JOptionPane.showMessageDialog(null, "You selected too few players.");
 			} else {
 				System.out.println("You have selected " + players + " players.");
 				break;

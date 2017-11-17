@@ -1,10 +1,16 @@
 package black.jack;
 
+import java.awt.Component;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 
 public class Player {
+	private int playerNumber = 0; 
+	private static int numberOfPlayers = 0;
+	
 	private int dollar = 200;
 	private int currentBet = 0;
 	private Scanner playerScanner = new Scanner(System.in);
@@ -12,7 +18,15 @@ public class Player {
 	private ArrayList<Card> playersCards = new ArrayList<>();
 	
 	public Player() {
-		name = playerScanner.nextLine();
+		numberOfPlayers++;
+		playerNumber = numberOfPlayers;
+		
+		//name = playerScanner.nextLine();
+		name = JOptionPane.showInputDialog("Player "+ playerNumber + " select a name: ");
+	}
+	
+	public Player(boolean dealer) {
+		name = "Dealer";
 	}
 	
 	public String getName() {
@@ -58,12 +72,14 @@ public class Player {
 	
 	public boolean bet() {
 		System.out.println("Do you want to bet? (Yes/No)");
+
 		
 		while (true) {
-			String answer = playerScanner.nextLine();
-			if (answer.equalsIgnoreCase("yes")) {
+			int answer = JOptionPane.showConfirmDialog( null, name + " do you want to bet?", "alert", JOptionPane.YES_NO_OPTION);
+			//String answer = playerScanner.nextLine();
+			if (answer == 0) {
 				break;
-			} else if (answer.equalsIgnoreCase("no")) {
+			} else if (answer == 1) {
 				return false;
 			} else {
 				System.out.println("Incorrect input, answer Yes or No");
