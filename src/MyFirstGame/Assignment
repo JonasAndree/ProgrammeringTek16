@@ -1,12 +1,37 @@
 
-Your first game,
-
-Basically you need to do a simple text adventure game with a output like this:
-
-You are standing in a forest clearing in the middle of the night. You hear
-some wolves howl in the distance. Should you:
 
 
-a) make camp for the night
-b) go further north
-> _
+Choose Your Own Adventure
+
+Create a  application that allows users to play a text-based "choose your own adventure" style game. 
+The game may be built around any theme you choose (ie: Surviving a zombie attack, successfully making it to a burrito food cart across town before it closes, 
+getting to Epicodus on time in the morning, etc.)
+Begin by presenting the user with a scenario (For instance: "You're walking along a path, when there's a fork in the road. You must choose to go either left or right. 
+Which direction do you walk?"). Then, offer different subsequent scenarios depending on the user's response.
+Repeat this process until you have many different gameplay possibilities and multiple potential endings. 
+The user should have to make their way through many different decisions and scenarios, before they either win by reaching the game's goal 
+(ie: Surviving that zombie attack, or making it to Epicodus before 8), or lose by not meeting that goal. Offer users the chance to start the game over when they lose.
+
+
+
+
+
+Other Game
+
+Created either a Pig Dice, Tic-Tac-Toe game or any other game you feel you would like to create.
+Recreate one of these as a command line interface game in Java (consider tackling the project you didn't complete in Intro). 
+Make sure to follow the "Red, Green, Refactor" BDD workflow throughout the course of development.
+
+
+
+
+
+
+Peer Code Review
+Tests have complete coverage for all behaviors.
+All tests are formatted correctly and pass.
+Classes are encapsulated and getter methods are used to access properties.
+Logic is well-refactored and easy to understand.
+
+
+
