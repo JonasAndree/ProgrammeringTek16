@@ -9,7 +9,7 @@ public class MultipleChoises {
 	public static void main(String[] args) {
 
 		// En lista med text i!
-		String[] options = new String[] { "Role the dice.", "Leave", "Look at it.", "Ask the man infront." };
+		String[] options = new String[] { "Role the dice.", "Leave", "Look at it.", "Ask the old man infront." };
 		// Hakparantes för att hämta en position.
 		String option3 = options[3];
 		// Bilden
@@ -22,7 +22,7 @@ public class MultipleChoises {
 		// Saves responce to an integer.
 		int response = JOptionPane.showOptionDialog(null, "You have reached a dungeon \nWhat would you like to do?",
 				"DUNGEON ENTRENCE!!!!!!", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options,
-				options[1]);
+				options[3]);
 
 		
 		if (response == 0) {
