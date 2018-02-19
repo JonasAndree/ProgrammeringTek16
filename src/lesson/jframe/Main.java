@@ -1,25 +1,40 @@
 package lesson.jframe;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.border.Border;
 
 public class Main extends JFrame implements WindowListener {
+	
+	
+	private JButton nextButton = new JButton("Next");
+	private JButton backButton = new JButton("Back");
+
+	private Toolkit tk = Toolkit.getDefaultToolkit();
+	
+	
 	
 	public Main() {
 		// Closes the program when x button is presseed.  
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// Hämtar en panel som man kan lägga andra grafiska object på
 		Container contentPane = this.getContentPane();
+		
 		// Lägger till sjig sjålv som en lysner till sitt egna fönster
 		this.addWindowListener(this);
 		
-		Toolkit tk = Toolkit.getDefaultToolkit();
 		
 		this.setSize(tk.getScreenSize().width, tk.getScreenSize().height);
 		this.setUndecorated(true);
@@ -31,33 +46,55 @@ public class Main extends JFrame implements WindowListener {
 	}
 	
 	public void addButtons(Container contentPane) {
-		// Create a  JButton
-		JButton okButton = new JButton("OK");
-		contentPane.add(okButton, BorderLayout.SOUTH);
-		okButton.addActionListener(e -> buttonAction());
 		
-
+		JPanel panel = new JPanel();
+		panel.setLayout(null);
+		contentPane.add(panel, BorderLayout.CENTER);
+		
+		
+		
+		
+		// Create a  JButton
+		JButton okButton = new JButton("Use key");
+		panel.add(okButton);
+		okButton.addActionListener(e -> buttonAction());
+		Dimension sizeOKButton = okButton.getPreferredSize();
+		okButton.setBounds(tk.getScreenSize().width - 400,tk.getScreenSize().height - 200, sizeOKButton.width, sizeOKButton.height);
+		
+		
+		
 		JButton closeButton = new JButton("Close");
-		contentPane.add(closeButton, BorderLayout.NORTH);
+		panel.add(closeButton);
 		closeButton.addActionListener(e -> buttonActionClose());
+		closeButton.setMnemonic(KeyEvent.VK_C);
+		Dimension size = closeButton.getPreferredSize();
+		closeButton.setBounds(tk.getScreenSize().width - 200, 20, size.width, size.height);
 
-
-		JButton nextButton = new JButton("Next");
+		
+		
+		
 		contentPane.add(nextButton, BorderLayout.EAST);
 		nextButton.addActionListener(e -> buttonActionNext());
+		nextButton.setToolTipText("<html><body><b style='color:red;text-decoration:underline;'>N</b><b>ext</b></body></html>");
 
 
-		JButton backButton = new JButton("Back");
 		contentPane.add(backButton, BorderLayout.WEST);
 		backButton.addActionListener(e -> buttonActionBack());
+		backButton.setBackground(Color.RED);
+		Border  matteBorder = BorderFactory.createMatteBorder(1,3,5,7,  Color.BLUE);
+		backButton.setBorder(matteBorder);
 		
 		
 	}
 
 	public void buttonActionNext() {
-		System.out.println("Next Button pressed!");
+		nextButton.setText("<html><body><b style='color:red;text-decoration:underline;'>N</b><b>ext</b></body></html>"); 
+		System.out.println("Next Button pressed!");	
 	}
+	
+	
 	public void buttonActionBack() {
+		
 		System.out.println("Back Button pressed!");
 	}
 	public void buttonAction() {

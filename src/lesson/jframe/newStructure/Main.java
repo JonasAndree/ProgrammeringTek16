@@ -27,7 +27,9 @@ public class Main extends JFrame implements WindowListener {
 		this.setUndecorated(true);
 		this.setOpacity(0.95f);
 		Container contentPane = this.getContentPane();
+		
 		contentPane.setLayout(null);
+		
 		addButtons(contentPane);
 	}
 
