@@ -1,15 +1,17 @@
-package lesson.jframe;
+package lesson.jframe.labelandstructure;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -24,6 +26,8 @@ public class Main extends JFrame implements WindowListener {
 	private JButton backButton = new JButton("Back");
 
 	private Toolkit tk = Toolkit.getDefaultToolkit();
+	private JPanel panel = new JPanel();
+	private JButton closeButton = new JButton("Close");
 	
 	
 	
@@ -48,22 +52,66 @@ public class Main extends JFrame implements WindowListener {
 	
 	public void addButtons(Container contentPane) {
 		
-		JPanel panel = new JPanel();
 		panel.setLayout(null);
 		contentPane.add(panel, BorderLayout.CENTER);
 		
+		ImageIcon poopIcon = new ImageIcon("C:/Users/jonas.andree/Desktop/poop.jpeg");
 		
+
+		Image image = poopIcon.getImage(); // transform it 
+		Image newimg = image.getScaledInstance(400, 400,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way  
+		poopIcon = new ImageIcon(newimg);  // transform it back
+		
+		JLabel labelIcon = new JLabel(poopIcon);
+		panel.add(labelIcon);
+		labelIcon.setBackground(new Color(20, 20, 20));
+		labelIcon.setBounds(1200,200, 400, 400);
+		
+		JLabel label = new JLabel("<html>"
+				+ "<body>"
+				+ "<b style='color:red;text-decoration:underline;'>"
+				+ "Press the use key button! Press the use key button!<br>"
+				+ "Press the use key button! Press the use key button!<br> "
+				+ "Press the use key button! Press the use key button!<br> "
+				+ "Press the use key button! Press the use key button!<br>"
+				+ "Press the use key button! Press the use key button!<br> "
+				+ "Press the use key button! Press the use key button!<br> "
+				+ "Press the use key button! Press the use key button!<br>"
+				+ "</b>" );
+		panel.add(label);
+		label.setBackground(new Color(20, 20, 20));
+		label.setBounds(400,200, 800, 800);
+
+		JTextArea textArea = new JTextArea("<html>"
+				+ "<body>"
+				+ "<b style='color:red;text-decoration:underline;'>"
+				+ "Press the use key button! Press the use key button!<br>"
+				+ "Press the use key button! Press the use key button!<br> "
+				+ "Press the use key button! Press the use key button!<br> "
+				+ "Press the use key button! Press the use key button!<br>"
+				+ "Press the use key button! Press the use key button!<br> "
+				+ "Press the use key button! Press the use key button!<br> "
+				+ "Press the use key button! Press the use key button!<br>"
+				+ "</b>" );
+		panel.add(textArea);
+		textArea.setBackground(new Color(20, 20, 20));
+		textArea.setBounds(200,200, 800, 800);
 		
 		// Create a  JButton
 		JButton okButton = new JButton("Use key");
 		panel.add(okButton);
-		okButton.addActionListener(e -> buttonAction());
+		okButton.addActionListener(e -> buttonAction(label));
 		Dimension sizeOKButton = okButton.getPreferredSize();
 		okButton.setBounds(tk.getScreenSize().width - 400,tk.getScreenSize().height - 200, sizeOKButton.width, sizeOKButton.height);
 		
+		// Create a  JButton
+		JButton clearButton = new JButton("Clear");
+		panel.add(clearButton);
+		clearButton.addActionListener(e -> buttonActionClear(label));
+		Dimension sizeClearButton = okButton.getPreferredSize();
+		clearButton.setBounds(tk.getScreenSize().width - 420 - sizeOKButton.width ,tk.getScreenSize().height - 200, sizeClearButton.width, sizeClearButton.height);
+				
 		
-		
-		JButton closeButton = new JButton("Close");
 		panel.add(closeButton);
 		closeButton.addActionListener(e -> buttonActionClose());
 		closeButton.setMnemonic(KeyEvent.VK_C);
@@ -87,18 +135,30 @@ public class Main extends JFrame implements WindowListener {
 		
 	}
 
+	private void buttonActionClear(JLabel label) {
+		label.setText("<html><body><b><br>Cleard</b>");
+
+	}
+
 	public void buttonActionNext() {
 		nextButton.setText("<html><body><b style='color:red;text-decoration:underline;'>N</b><b>ext</b></body></html>"); 
 		System.out.println("Next Button pressed!");	
+
+		panel.removeAll();
+		
+		panel.add(closeButton);
+		
+		panel.repaint();
 	}
+	
+	
 	
 	
 	public void buttonActionBack() {
-		
 		System.out.println("Back Button pressed!");
 	}
-	public void buttonAction() {
-		System.out.println("Ok Button pressed!");
+	public void buttonAction(JLabel label) {
+		label.setText(label.getText() + "<b><br>Use key button pressed!</b>");
 	}
 	public void buttonActionClose() {
 		System.out.println("Close Button pressed!");
@@ -115,7 +175,6 @@ public class Main extends JFrame implements WindowListener {
 	@Override
 	public void windowActivated(WindowEvent e) {
 		System.out.println("windowActivated");
-		
 	}
 
 	@Override
@@ -126,31 +185,25 @@ public class Main extends JFrame implements WindowListener {
 	@Override
 	public void windowClosing(WindowEvent e) {
 		System.out.println("windowClosing");		
-		
 	}
 
 	@Override
 	public void windowDeactivated(WindowEvent e) {
 		System.out.println("windowDeactivated");		
-		
 	}
 
 	@Override
 	public void windowDeiconified(WindowEvent e) {
 		System.out.println("windowDeiconified");		
-		
 	}
 
 	@Override
 	public void windowIconified(WindowEvent e) {
 		System.out.println("windowIconified");		
-		
 	}
 
 	@Override
 	public void windowOpened(WindowEvent e) {
 		System.out.println("windowOpened");		
-		
 	}
-
 }
