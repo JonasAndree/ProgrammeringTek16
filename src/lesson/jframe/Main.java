@@ -35,7 +35,7 @@ public class Main extends JFrame implements WindowListener {
 	private JButton backButton = new JButton("Back");
 	private Toolkit tk = Toolkit.getDefaultToolkit();
 	
-	private JLabel textInfo = new JLabel("Hej");
+	private JLabel houseText = new JLabel("You stand infront of a house. What would you like to do?");
 	
 	private int level = 1;
 	
@@ -52,11 +52,12 @@ public class Main extends JFrame implements WindowListener {
 		
 		this.setSize(tk.getScreenSize().width, tk.getScreenSize().height);
 		this.setUndecorated(true);
-		this.setOpacity(0.95f);
+		//this.setOpacity(0.95f);
 		this.setLocationRelativeTo(null);
 		
 		// KÃ¶r funktionen addButtons 
 		addComp(contentPane);
+		
 	}
 	/**
 	 * alt-shift-r gÃ¶r sÃ¥ att alla referenser av ordet Ã¤ndras
@@ -67,8 +68,12 @@ public class Main extends JFrame implements WindowListener {
 		panel.setLayout(null);
 		contentPane.add(panel, BorderLayout.CENTER);
 		panel.setBackground(Color.BLACK);
-		// end of panel
 		
+		
+		houseSceen();
+		
+		// end of panel
+		/*
 		{
 			panel.add(imageLabel);
 			Image image = poopIcon.getImage(); // transform it 
@@ -78,7 +83,7 @@ public class Main extends JFrame implements WindowListener {
 			imageLabel.setBounds(200, 200, 400, 400);
 		}
 		
-		{
+		{ // kanppar ränsa någonting
 			JButton clearButton = new JButton("Clear");
 			panel.add(clearButton);
 			clearButton.addActionListener(e -> buttonActionClear());
@@ -124,13 +129,14 @@ public class Main extends JFrame implements WindowListener {
 			Border  matteBorder = BorderFactory.createMatteBorder(1,3,5,7,  Color.BLUE);
 			backButton.setBorder(matteBorder);
 		}// end of back 
-		
+		*/
 	}
-
+/*
 	private void buttonActionClear() {
 		textInfo.setText("<html><body>");
 
-	}
+	}*
+	/*
 	public void buttonActionNext() {
 		nextButton.setText("<html><body><b style='color:red;text-decoration:underline;'>N</b><b>ext</b></body></html>"); 
 		System.out.println("Next Button pressed!");	
@@ -151,16 +157,16 @@ public class Main extends JFrame implements WindowListener {
 		}
 		
 		
-	}
+	}*/
 	
 	
 	public void buttonActionBack() {
 		
 		System.out.println("Back Button pressed!");
 	}
-	public void buttonAction() {
+	/*public void buttonAction() {
 		textInfo.setText(textInfo.getText() + "<b style='color:#FFFFFF;'> <br>Use key button pressed!</b>");
-	}
+	}*/
 	public void buttonActionClose() {
 		System.out.println("Close Button pressed!");
 		System.exit(0);
@@ -171,6 +177,42 @@ public class Main extends JFrame implements WindowListener {
 		frame.setVisible(true);
 	}
 
+	
+	
+	// function som reprecenterar en sceen outside the house 
+	public void houseSceen() {
+		// lite intro text 
+		{
+			panel.add(houseText);
+			houseText.setBounds(100, 100, 200, 800);
+			houseText.setText("<html><body><b style='color:#FFFFFF'>You stand infront of a house. What would you like to do?</b>");
+			//Border  matteBorder = BorderFactory.createMatteBorder(1,3,5,7,  Color.BLUE);
+			//textInfo.setBorder(matteBorder);
+		}
+		// bild som visar huset  
+		// 3 knappar 
+			//1 öppna dörr -> gå vidara till hall sceen 2  
+			//2 gå hem 
+			//3 aspidfjiosaj
+	}
+	
+	// function som reprecenterar hall sceenen 
+		//lite text och bild
+		// 3 knappar 
+			//dörr 1 -> rum
+			// dörr 2 ska säga att den är låst 
+			// dörr 3 skall led a till ens död -> gameover -> Hosue
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 
 	@Override

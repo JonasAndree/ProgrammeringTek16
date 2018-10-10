@@ -1,5 +1,6 @@
 
-1. Write a Java program to check whether a given number is an ugly number. 
+1. 
+Write a program to check whether a given number is an ugly number. 
 
 	In number system, ugly numbers are positive numbers whose only prime factors are 2, 3 or 5. 
 	First 10 ugly numbers are 1, 2, 3, 4, 5, 6, 8, 9, 10, 12. By convention, 1 is included. 
@@ -10,7 +11,8 @@
 		It is not an ugly number.
 
 
-2. Write a Java program to classify Abundant, deficient and perfect number (integers) between 1 to 10,000.
+2. 
+Write a program to classify Abundant, deficient and perfect number (integers) between 1 to 10,000.
 
 	In number theory, an abundant number is a number for which the sum of its proper divisors is greater than the number itself.
 	
@@ -35,9 +37,11 @@
 		Abundant number: 2488
 
 
-3. Write a Java program to generate random integers in a specific range.
+3. 
+Write a program to generate random integers in a specific range.
 
-4. Write a Java program to generate and show all Kaprekar numbers less than 1000.
+4. 
+Write a program to generate and show all Kaprekar numbers less than 1000.
 
 	Expected Output : 
 		1       1         0 + 1                                  
@@ -51,7 +55,8 @@
 		8 Kaprekar numbers. 
 
 
-5. Write a Java program to find the number of seed Lychrel number candidates and related 
+5. 
+Write a program to find the number of seed Lychrel number candidates and related 
 	numbers for n in the range 1..10000 inclusive. (With that iteration limit of 500).
 
 	A Lychrel number is a natural number that cannot form a palindrome through the iterative process of repeatedly reversing 
@@ -64,12 +69,14 @@
 		244 Lychrel related 
 		5 Lychrel palindromes: [196, 879, 1997, 7059, 9999]
 
-6. Write a Java program to generate and show the first 15 narcissistic decimal numbers.
+6. 
+Write a program to generate and show the first 15 narcissistic decimal numbers.
 
 	Expected Output:
 		0 1 2 3 4 5 6 7 8 9 153 370 371 407 1634
 
-7. Write a Java program to display first 10 lucus numbers. 
+7. 
+Write a program to display first 10 lucus numbers. 
 
 	The Lucas numbers or series are an integer sequence named after the mathematician François Édouard Anatole Lucas, 
 	who studied both that sequence and the closely related Fibonacci numbers. Lucas numbers and Fibonacci numbers 
@@ -89,7 +96,7 @@
 		47                                                                      
 		76
 
-8.Write a Java program to print out the first 10 Catalan numbers by extracting them from Pascal's triangle.
+8.Write a program to print out the first 10 Catalan numbers by extracting them from Pascal's triangle.
 
 	In combinatorial mathematics, the Catalan numbers form a sequence of natural numbers that occur in various counting problems, 
 	often involving recursively-defined objects. They are named after the Belgian mathematician Eugène Charles Catalan.
@@ -109,7 +116,8 @@
 	4862                                                                    
 	16796  
 
-9. Write a Java program to find and print the first 10 happy numbers. 
+9. 
+Write a program to find and print the first 10 happy numbers. 
 
 	Happy number: Starting with any positive integer, replace the number by the sum of the squares of its digits, 
 	and repeat the process until the number equals 1, or it loops endlessly in a cycle which does not include 1.
@@ -131,7 +139,8 @@
 		31   
 
 
-10. Write a Java program to check whether a given number is a happy number or unhappy number.
+10. 
+Write a program to check whether a given number is a happy number or unhappy number.
 
 	Happy number: Starting with any positive integer, replace the number by the sum of the squares of its digits, 
 	and repeat the process until the number equals 1, or it loops endlessly in a cycle which does not include 1.
@@ -142,7 +151,8 @@
 		Input a number: 5                                                       
 		Unhappy Number
 
-11. Write a Java program to check whether a given number is a Disarium number or unhappy number. 
+11. 
+Write a program to check whether a given number is a Disarium number or unhappy number. 
 
 	A Disarium number is a number defined by the following process :
 		Sum of its digits powered with their respective position is equal to the original number.
@@ -158,7 +168,8 @@
 		Not a Disarium Number.
 
 
-12. Write a Java program to check whether a number is a Harshad Number or not.
+12. 
+Write a program to check whether a number is a Harshad Number or not.
 
 	In recreational mathematics, a harshad number in a given number base, is an integer that is divisible by the sum of 
 	its digits when written in that base.
@@ -170,7 +181,8 @@
 		                                                  
 		353 is not a Harshad Number.
 
-13. Write a Java program to check whether a number is a Pronic Number or Heteromecic Number or not. Go to the editor
+13. 
+Write a program to check whether a number is a Pronic Number or Heteromecic Number or not. Go to the editor
 	A pronic number is a number which is the product of two consecutive integers, that is, a number of the form n(n + 1).
 	The first few pronic numbers are:
 	0, 2, 6, 12, 20, 30, 42, 56, 72, 90, 110, 132, 156, 182, 210, 240, 272, 306, 342, 380, 420, 462 … etc.
@@ -179,7 +191,8 @@
 		Input a number : 110 
 		Pronic Number.
 
-14. Write a Java program check whether a number is an Automorphic number or not.
+14. 
+Write a program check whether a number is an Automorphic number or not.
 
 	In mathematics, an automorphic number is a number whose square "ends" in the same digits as the number itself. 
 	For example, 52 = 25, 62 = 36, 762 = 5776, and 8906252 = 793212890625, so 5, 6, 76 and 890625 are all automorphic numbers.
@@ -188,7 +201,8 @@
 		Input a number : 76                                                   
 		Automorphic Number.
 
-15. Write a Java program to check whether a number is a Duck Number or not. 
+15. 
+Write a program to check whether a number is a Duck Number or not. 
 
 	Note: A Duck number is a number which has zeroes present in it, but there should be no zero present in the beginning of the number. 
 	For example 3210, 7056, 8430709 are all duck numbers whereas 08237, 04309 are not.
@@ -197,7 +211,8 @@
 		Input a number : 3210                                                   
 		Duck number
 
-16. Write a Java program to check two numbers are Amicable numbers or not. 
+16. 
+Write a program to check two numbers are Amicable numbers or not. 
 
 	Amicable numbers are two different numbers so related that the sum of the proper divisors of each is equal to the other number.
 	The first ten amicable pairs are: (220, 284), (1184, 1210), (2620, 2924), (5020, 5564), (6232, 6368), (10744, 10856), (12285, 14595), 
@@ -207,7 +222,8 @@
 		Input the second number: 284                                            
 		These numbers are amicable.
 
-17. Write a Java program to check if a given number is circular prime or not.
+17. 
+Write a program to check if a given number is circular prime or not.
 
 	Circular Prime : A circular prime is a prime number with the property that the number generated at each intermediate step 
 	when cyclically permuting its (base 10) digits will be prime.
@@ -221,7 +237,8 @@
 		It is not a Circular Prime number.
 
 
-18. Write a Java program to check a number is a cube or not. Go to the editor
+18. 
+Write a program to check a number is a cube or not. Go to the editor
 	
 	In arithmetic and algebra, the cube of a number n is its third power: the result of the number multiplied by itself twice:
 	n3 = n × n × n.
@@ -231,7 +248,8 @@
 	Expected Output
 		Number is a cube.
 
-19. Write a Java program to check a number is a cyclic or not.  
+19. 
+Write a program to check a number is a cyclic or not.  
 	
 	A cyclic number is an integer in which cyclic permutations of the digits are successive multiples of the number. 
 	
@@ -250,7 +268,8 @@
 		
 		
 		
-20. Write a Java program to display first 10 Fermat numbers.		
+20. 
+Write a program to display first 10 Fermat numbers.		
 		
 		In mathematics, a Fermat number is a positive integer of the form Fermat Number
 		where n is a nonnegative integer.
@@ -272,7 +291,8 @@
 			Infinity  
 		
 		
-21. Write java program to find any number between 1 and n that can be expressed as the sum of two cubes in two (or more) different ways.		
+21. 
+Write program to find any number between 1 and n that can be expressed as the sum of two cubes in two (or more) different ways.		
 		
 	//http://introcs.cs.princeton.edu/java/13flow/Ramanujan.java.html
 	Here are some examples of Ramanujan numbers :
@@ -304,7 +324,8 @@
 		65728 = 12^3 + 40^3 = 31^3 + 33^3                                       
 		64232 = 17^3 + 39^3 = 26^3 + 36^3		
 		
-22. Write a program to check if a number is Mersenne number or not
+22. 
+Write a program to check if a number is Mersenne number or not
 
 	In mathematics, a Mersenne number is a prime number that can be written in the form Mn = 2n − 1 for some integer n.
 	The first four Mersenne primes are 3, 7, 31, and 127
@@ -314,7 +335,8 @@
 		127 is a Mersenne number.
 
 
-23. Write a Java program to find all the narcissistic numbers between 1 and 1000. 
+23. 
+Write a program to find all the narcissistic numbers between 1 and 1000. 
 
 	In number theory, a narcissistic number is a number that is the sum of its own digits each raised to the power of the number of digits.
 		For example:
@@ -335,7 +357,8 @@
 		371                                                    
 		407
 
-24. Write a Java program to check if a number is palindrome or not.
+24. 
+Write a program to check if a number is palindrome or not.
 
 	In number system a palindromic number is a number that is the same when written forwards or backwards, i.e., of the form .
 	The first few palindromic numbers are therefore are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 44, 55, 66, 77, 88, 99, 101, 111, …
@@ -344,7 +367,8 @@
 		Input a number: 5                                                       
 		It is a Palindrome number.
 
-25. Write a Java program to print the first 15 numbers of the Pell series.
+25. 
+Write a program to print the first 15 numbers of the Pell series.
 
 	In mathematics, the Pell numbers are an infinite sequence of integers. The sequence of Pell numbers starts with 0 and 1, 
 	and then each Pell number is the sum of twice the previous Pell number and the Pell number before that.:
@@ -358,7 +382,8 @@
 		1 2 5 12 29 70 169 408 985 2378 5741 13860 33461 80782 195025 470832 113
 		6689 2744210 6625109 15994428
 
-26. Write a Program in Java to check whether a number is a Keith Number or not. 
+26. 
+Write a Program to check whether a number is a Keith Number or not. 
 
 	In recreational mathematics, a Keith number or repfigit number (short for repetitive Fibonacci-like digit) is a 
 	number in the following integer sequence:
@@ -370,7 +395,8 @@
 		Keith Number
 		
 		
-27. Write a Java program to check if a given number is circular prime or not.
+27. 
+Write a program to check if a given number is circular prime or not.
 
 	A circular prime is a prime number with the property that the number generated at each intermediate step when cyclically 
 	permuting its (base 10) digits will be prime. 
@@ -391,7 +417,8 @@
 		        1193 is a circular_num Prime number.
 
 
-28. Write a Java program to create the first twenty Hamming numbers.
+28. 
+Write a program to create the first twenty Hamming numbers.
 
 	In computer science, regular numbers are often called Hamming numbers, Hamming Numbers are numbers whose only prime 
 	factors are 2, 3 and 5.

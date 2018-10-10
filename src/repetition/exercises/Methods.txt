@@ -1,4 +1,4 @@
-1. Write a Java method to find the smallest number among three numbers.
+1. Write a method to find the smallest number among three numbers.
 
 	Test Data:
 		Input the first number: 25
@@ -7,7 +7,7 @@
 	Expected Output:
 		The smallest value is 25.0
 
-2. Write a Java method to compute the average of three numbers. 
+2. Write a method to compute the average of three numbers. 
 
 	Test Data:
 		Input the first number: 25 
@@ -17,7 +17,7 @@
 	Expected Output:
 		The average value is 45.0
 
-3. Write a Java method to display the middle character of a string.
+3. Write a method to display the middle character of a string.
 
 	Note: 
 		a) If the length of the string is odd there will be two middle characters.
@@ -29,7 +29,7 @@
 	Expected Output:
 	    The middle character in the string: 5
 
-4. Write a Java method to count all vowels in a string.
+4. Write a method to count all vowels in a string.
 
 	Test Data:
 		Input the string: w3resource 
@@ -37,20 +37,20 @@
 	Expected Output:
 		Number of  Vowels in the string: 4
 
-5. Write a Java method to count all words in a string. 
+5. Write a method to count all words in a string. 
 	
 	Test Data:
 		Input the string: The quick brown fox jumps over the lazy dog.
 	Expected Output:
 		Number of words in the string: 9
 
-6. Write a Java method to compute the sum of the digits in an integer.
+6. Write a method to compute the sum of the digits in an integer.
 	Test Data:
 		Input an integer: 25
 	Expected Output:
 		The sum is 7 
 
-7. Write a Java method to display the first 50 pentagonal numbers.
+7. Write a method to display the first 50 pentagonal numbers.
 	Note: 
 		A pentagonal number is a figurate number that extends the concept of triangular and square numbers to the pentagon, 
 		but, unlike the first two, the patterns involved in the construction of pentagonal numbers are not rotationally symmetrical.
@@ -62,7 +62,7 @@
 		1426  1520  1617  1717  1820  1926  2035  2147  2262  2380
 		2501  2625  2752  2882  3015  3151  3290  3432  3577  3725 
 
-8. Write a Java method to compute the future investment value at a given interest rate for a specified number of years.
+8. Write a method to compute the future investment value at a given interest rate for a specified number of years.
 	
 	Sample data (Monthly compounded) and Output:
 		Input the investment amount: 1000
@@ -78,7 +78,7 @@
 		4            1489.35                                     
 		5            1645.31
 
-9. Write a Java method to print characters between two characters (i.e. A to P ).
+9. Write a method to print characters between two characters (i.e. A to P ).
 
 	Note: 
 		Prints 20 characters per line
@@ -90,13 +90,13 @@
 		d e f g h i j k l m n o p q r s t u v w                  
 		x y z
 
-10. Write a Java method to check whether a year (integer) entered by the user is a leap year or not.
+10. Write a method to check whether a year (integer) entered by the user is a leap year or not.
 
 	Expected Output:
 		Input a year: 2017                                                                        
 		false
 
-11. Write a Java method to check whether a string is a valid password.
+11. Write a method to check whether a string is a valid password.
 	Password rules:
 		A password must have at least ten characters.
 		A password consists of only letters and digits.
@@ -110,7 +110,7 @@
 	Input a password (You are agreeing to the above Terms and Conditions.): abcd1234           
 	Password is valid: abcd1234 
 
-12. Write a Java method (takes a number n as input) to displays an n-by-n matrix.
+12. Write a method (takes a number n as input) to displays an n-by-n matrix.
 
 	Expected Output:
 		Input a number: 10                                                                         
@@ -125,7 +125,7 @@
 		0 0 1 0 0 0 0 1 1 0                                                        
 		1 1 1 0 0 1 1 1 1 0
 
-13. Write Java methods to calculate the area of a triangle. 
+13. Write methods to calculate the area of a triangle. 
 
 	Expected Output:
 		Input Side-1: 10                                                                               
@@ -134,7 +134,7 @@
 		The area of the triangle is 72.6184377413890
 
 
-14. Write a Java method to create the area of a pentagon. 
+14. Write a method to create the area of a pentagon. 
 
 	Expected Output:
 		Input the number of sides: 5                             
@@ -142,12 +142,12 @@
 		The area of the pentagon is 61.93718642120281
 
 
-15. Write a Java method to display the current date and time.
+15. Write a method to display the current date and time.
 
 	Expected Output:
 		Current date and time: Wednesday January 25, 2017 7:47:43
 
-16. Write a Java method to find all twin prime numbers less than 100.
+16. Write a method to find all twin prime numbers less than 100.
 
 	Expected Output:
 		(3, 5)                                                   

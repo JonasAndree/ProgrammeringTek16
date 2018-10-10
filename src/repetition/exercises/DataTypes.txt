@@ -8,7 +8,7 @@ Data1. Write a Java program to convert temperature from Fahrenheit to Celsius de
 	Expected Output:
 		212.0 degree Fahrenheit is equal to 100.0 in Celsius
 	  
-Data2. Write a Java program that reads a number in inches, converts it to meters   
+Data2. Write a program that reads a number in inches, converts it to meters   
 
 	Note: One inch is 0.0254 meter.
 	
@@ -17,28 +17,28 @@ Data2. Write a Java program that reads a number in inches, converts it to meters
 	Expected Output :
 		1000.0 inch is 25.4 meters
 	  
-Data3. Write a Java program that reads an integer between 0 and 1000 and adds all the digits in the integer.
+Data3. Write a program that reads an integer between 0 and 1000 and adds all the digits in the integer.
 
 	Test Data
 		Input an integer between 0 and 1000: 565
 	Expected Output:
 		The sum of all digits in 565 is 16.
 
-Data4. Write a Java program to convert minutes into a number of years and days.
+Data4. Write a program to convert minutes into a number of years and days.
   
 	Test Data
 		Input the number of minutes: 3456789
 	Expected Output:
 		3456789 minutes is approximately 6 years and 210 days
 
-Data5. Write a Java program that prints the current time in GMT.
+Data5. Write a program that prints the current time in GMT.
 
 	Test Data
 		Input the time zone offset to GMT: 256
 	Expected Output:
 		Current time is 23:40:24
 
-Data6. Write a Java program to compute body mass index (BMI).
+Data6. Write a program to compute body mass index (BMI).
 
 	Test Data
 		Input weight in pounds: 452
@@ -46,7 +46,7 @@ Data6. Write a Java program to compute body mass index (BMI).
 	Expected Output:
 		Body Mass Index is 61.30159143458721
 
-Data7. Write a Java program to takes the user for a distance 
+Data7. Write a program to takes the user for a distance 
 	   (in meters) and the time was taken (as three numbers: 
  	   hours, minutes, seconds), and display the speed, in 
  	   meters per second, kilometers per hour and miles per 
@@ -62,14 +62,14 @@ Data7. Write a Java program to takes the user for a distance
 		Your speed in km/h is 0.42089513
 		Your speed in miles/h is 0.26158804
 
-Data 8. Write a Java program that reads a number and display the square, cube, and fourth power.
+Data 8. Write a program that reads a number and display the square, cube, and fourth power.
 
 	Expected Output:
 		Square: .2f 
 		Cube: .2f
 		Fourth power: 50625.00
 
-Data9. Write a Java program that accepts two integers from the 
+Data9. Write a program that accepts two integers from the 
  	   user and then prints the sum, the difference, the product, 
 	   the average, the distance (the difference between integer), 
  	   the maximum (the larger of the two integers), the minimum 
@@ -87,7 +87,7 @@ Data9. Write a Java program that accepts two integers from the
 		Max integer: 25 
 		Min integer: 5
 
-Data10. Write a Java program to break an integer into a sequence of 
+Data10. Write a program to break an integer into a sequence of 
 individual digits. 
 
 	Test Data
